@@ -16,3 +16,4 @@ module.exports = {
     ],
   },
 }
+/Users/otokokouki/Desktop/src

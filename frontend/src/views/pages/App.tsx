@@ -9,8 +9,12 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import '../../css/App.css';
 import Test from './test.tsx';
 import Test2 from './test2.tsx';
+import EventMouse from '../composnents/EventMouse.tsx';
+import WhiteBaloon from '../../img/home/balloon_white.png'
+import YellowBaloon from '../../img/home/balloon_yellow.png'
+import HeaderMenu from '../composnents/header.tsx';
 
-
+// import Test3 from './test3.tsx';
 
 function App() {
   return(
@@ -20,11 +24,42 @@ function App() {
           <Routes>
             <Route path="/test" element={ <Test /> } />
             <Route path="/test2" element={ <Test2 /> } />
+            {/* 新しくページを追加した時 */}
+            {/* <Route path="/test3" element={ <Test3 /> } /> */}
           </Routes>
         </BrowserRouter>
       </div>
-      <div>
-        <p>Hello World!</p>
+
+      <HeaderMenu />
+
+      <div className="baloonMenu">
+        <div className="game">
+            <a href="#">
+                <EventMouse 
+                    alt="バルーンメニュー画像" 
+                    className="baloonDesign" 
+                    beforeSrc={WhiteBaloon} 
+                    afterSrc={YellowBaloon} />
+            </a>
+        </div>
+        <div className="quiz">
+            <a href="#">
+                <EventMouse 
+                    alt="バルーンメニュー画像"
+                    className="baloonDesign" 
+                    beforeSrc={WhiteBaloon} 
+                    afterSrc={YellowBaloon} />
+            </a>
+        </div>
+        <div className="study">
+            <a href="#">
+                <EventMouse 
+                    alt="バルーンメニュー画像"
+                    className="baloonDesign"
+                    beforeSrc={WhiteBaloon} 
+                    afterSrc={YellowBaloon} />
+            </a>
+        </div>
       </div>
     </>
   );
